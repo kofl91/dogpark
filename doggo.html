@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Doggo</h2>
+
+<img id="doggo" src="lay.jpeg" alt="a picture of a dog" width=400>
+
+<h3>Order doggo to do something. Maybe he will understand you :)</h3>
+<input id="order" type="text" value="">
+<button id="button" type="button" onclick="
+ doggobehaviour()
+">Click Me!</button>
+
+
+<script>
+
+function doggobehaviour(){
+	console.log('pressed')
+	order=document.getElementById('order').value
+	console.log(order)
+	if(order==='sit'){
+	document.getElementById('doggo').src = 'sit'
+	}
+
+	if(order==='paw'){
+	document.getElementById('doggo').src = 'paw.jpg'
+	}
+
+	if(order==='roll'){
+	document.getElementById('doggo').src = 'roll.jpg'
+	}
+
+	if(order==='love'){
+	document.getElementById('doggo').src = 'love.jpg'
+	}
+
+}
+document.getElementById("order")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        doggobehaviour();
+    }
+});
+</script>
+</body>
+</html>
+
