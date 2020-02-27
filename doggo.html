@@ -16,25 +16,31 @@
 <script>
 
 function doggobehaviour(){
-	console.log('pressed')
 	order=document.getElementById('order').value
-	console.log(order)
+	
 	if(order==='sit'){
-	document.getElementById('doggo').src = 'sit'
+ 	  changePictureTo('sit')
 	}
 
 	if(order==='paw'){
-	document.getElementById('doggo').src = 'paw.jpg'
+	  changePictureTo('paw')
 	}
 
 	if(order==='roll'){
-	document.getElementById('doggo').src = 'roll.jpg'
+	  changePictureTo('roll')
 	}
 
 	if(order==='love'){
-	document.getElementById('doggo').src = 'love.jpg'
+	  changePictureTo('love')
 	}
 
+	if(order==='lay'){
+	  changePictureTo('lay')
+	}
+}
+
+function changePictureTo(picture){
+	document.getElementById('doggo').src =  picture+'.jpg'
 }
 document.getElementById("order")
     .addEventListener("keyup", function(event) {
